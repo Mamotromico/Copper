@@ -9,6 +9,26 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Circuit",
+"language": "GDScript",
+"path": "res://scripts/Circuit.gd"
+}, {
+"base": "Node",
+"class": "CircuitComponent",
+"language": "GDScript",
+"path": "res://components/CircuitComponent.gd"
+}, {
+"base": "Reference",
+"class": "CircuitRow",
+"language": "GDScript",
+"path": "res://scripts/CircuitRow.gd"
+}, {
+"base": "Reference",
+"class": "Simulator",
+"language": "GDScript",
+"path": "res://scripts/Simulator.gd"
+}, {
 "base": "Reference",
 "class": "WAT",
 "language": "GDScript",
@@ -20,6 +40,10 @@ _global_script_classes=[ {
 "path": "res://addons/WAT/runner/test.gd"
 } ]
 _global_script_class_icons={
+"Circuit": "",
+"CircuitComponent": "",
+"CircuitRow": "",
+"Simulator": "",
 "WAT": "",
 "WATTest": ""
 }
@@ -31,14 +55,10 @@ Test_Directory="res://tests"
 [application]
 
 config/name="Copper"
-run/main_scene="res://Simulation.tscn"
+run/main_scene="res://scenes/Simulation.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
-
-[editor_plugins]
-
-enabled=PoolStringArray( "WAT" )

@@ -10,3 +10,5 @@ addons/
 .mono/
 
 *.code-workspace
+
+.vscode/
