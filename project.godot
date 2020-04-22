@@ -9,7 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
+"base": "CircuitComponent",
+"class": "BatteryComponent",
+"language": "GDScript",
+"path": "res://BatteryComponent.gd"
+}, {
+"base": "Resource",
 "class": "Circuit",
 "language": "GDScript",
 "path": "res://scripts/Circuit.gd"
@@ -19,12 +24,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://components/CircuitComponent.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "CircuitRow",
 "language": "GDScript",
 "path": "res://scripts/CircuitRow.gd"
 }, {
-"base": "Reference",
+"base": "CircuitComponent",
+"class": "ResistorComponent",
+"language": "GDScript",
+"path": "res://ResistorComponent.gd"
+}, {
+"base": "Resource",
 "class": "Simulator",
 "language": "GDScript",
 "path": "res://scripts/Simulator.gd"
@@ -40,9 +50,11 @@ _global_script_classes=[ {
 "path": "res://addons/WAT/runner/test.gd"
 } ]
 _global_script_class_icons={
+"BatteryComponent": "",
 "Circuit": "",
 "CircuitComponent": "",
 "CircuitRow": "",
+"ResistorComponent": "",
 "Simulator": "",
 "WAT": "",
 "WATTest": ""
@@ -58,7 +70,15 @@ config/name="Copper"
 run/main_scene="res://scenes/Simulation.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+BB="*res://BB.gd"
+
 [display]
 
 window/size/width=1280
 window/size/height=720
+
+[editor_plugins]
+
+enabled=PoolStringArray( "WAT" )
