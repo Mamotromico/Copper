@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "CircuitComponent",
+"base": "Reference",
 "class": "BatteryComponent",
 "language": "GDScript",
-"path": "res://BatteryComponent.gd"
+"path": "res://components/BatteryComponent.gd"
 }, {
 "base": "Resource",
 "class": "Circuit",
@@ -32,7 +32,7 @@ _global_script_classes=[ {
 "base": "CircuitComponent",
 "class": "ResistorComponent",
 "language": "GDScript",
-"path": "res://ResistorComponent.gd"
+"path": "res://components/ResistorComponent.gd"
 }, {
 "base": "Resource",
 "class": "Simulator",

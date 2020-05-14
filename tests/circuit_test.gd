@@ -106,7 +106,7 @@ func test_mock_circuit():
 	resistor3.bands.multiplier = BB.RED_M
 	resistor3.bands.tolerance = BB.BROWN_T
 	resistor3.bands.ppm = BB.BROWN_P
-	resistor3.leads["A"] = circuit.breadboard[Vector2(BB.BUS_A, 1)].insert_lead(resistor3, Vector2(BB.BUS_A, 1))
+	resistor3.leads["A"] = circuit.breadboard[Vector2(BB.BUS_A, 2)].insert_lead(resistor3, Vector2(BB.BUS_A, 2))
 	resistor3.leads["B"] = circuit.breadboard[Vector2(BB.BUS_A, 3)].insert_lead(resistor3, Vector2(BB.BUS_A, 3))
 
 	var resistor4 : ResistorComponent = ResistorComponent.new()
@@ -129,19 +129,27 @@ func test_mock_circuit():
 	resistor5.bands.tolerance = BB.BROWN_T
 	resistor5.bands.ppm = BB.BROWN_P
 	resistor5.leads["A"] = circuit.breadboard[Vector2(BB.BUS_A, 4)].insert_lead(resistor5, Vector2(BB.BUS_A, 4))
-	resistor5.leads["B"] = circuit.breadboard[Vector2(BB.BUS_A, 5)].insert_lead(resistor5, Vector2(BB.BUS_A, 5))
+	resistor5.leads["B"] = circuit.breadboard[Vector2(BB.BUS_A, 1)].insert_lead(resistor5, Vector2(BB.BUS_A, 1))
 
 
 
 	# Act
 
-	var list = circuit.get_connection_list()
+#	var list = circuit.get_connection_list()
+#	for entry in list:
+#		print(entry, " === ", list[entry])
+#
+#	var second_list = circuit.get_loops()
+#	for entry in second_list:
+#		print(entry, " --- ", second_list[entry])
+		
+	var list = circuit.m_get_connection_list()
 	for entry in list:
 		print(entry, " === ", list[entry])
-#
-	var second_list = circuit.get_loops()
-	for entry in second_list:
-		print(entry, " --- ", second_list[entry])
+		
+#	var second_list = circuit.m_get_loops()
+#	for entry in second_list:
+#		print(entry, " --- ", second_list[entry])
 
 	# Assert
 	pass
