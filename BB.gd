@@ -1,15 +1,13 @@
 extends Node
 
-const INVALID = Vector2(-3,-3)
-const DISCONNECTED = Vector2(-1,0)
-const BUS_A_NEGATIVE = Vector2(-1,-1)
-const BUS_A_POSITIVE = Vector2(-1,1)
-const BUS_B_NEGATIVE = Vector2(-1,-2)
-const BUS_B_POSITIVE = Vector2(-1,2)
+const INVALID = Vector2(-5,-5)
+const DISCONNECTED = Vector2(-5,0)
+const BUS_A_POSITIVE = -1
+const BUS_A_NEGATIVE = -2
+const BUS_B_POSITIVE = -3
+const BUS_B_NEGATIVE = -4
 const BUS_LENGTH = 63
 const BUS_WIDTH = 5
-const BUS_A = 1
-const BUS_B = 2
 
 const BLACK_B = 0
 const BROWN_B = 1
